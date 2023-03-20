@@ -1,0 +1,81 @@
+
+
+
+
+
+INTENTOS FALLIDOS DE HACERLO EN UNA 
+A ESTO LE LLAMO PANTEON
+
+=
+
+
+
+
+
+
+
+producto.comprar(namebusqueda, existenciamenos);
+
+
+ for (Producto p : arrayproductos){
+            out.println("los productos vendidos ahora son"+
+                    "nombre"+ p.getNbus() + "existencias actuales"  + p.getExmen());
+        }
+ String namebusqueda = request.getParameter("nbus");
+                int existenciamenos=Integer.parseInt(request.getParameter("exmen"));                
+JAVA
+, String namebusqueda, int existenciamenos
+   this.nbus=namebusqueda;
+        this.exmen=existenciamenos;
+
+
+
+double precio = Double.parseDouble(request.getParameter("preciop"));
+        String nombre = request.getParameter("nombrep");
+        int existencia = Integer.parseInt(request.getParameter("existenciap"));
+        //sujeto de cambios
+        String nombrebusqueda = request.getParameter("nbus");
+        int existenciamenos = Integer.parseInt(request.getParameter("exmen"));
+        //no
+        ArrayList<Producto> arrayproductos = new ArrayList<Producto>();
+        Producto producto = new Producto(nombre, precio, existencia);
+        producto.registrar();
+        arrayproductos = Producto.getProductos();
+        Collections.sort(arrayproductos, Comparator.comparing(Producto::getNombrep));
+
+
+double precio = Double.parseDouble(request.getParameter("preciop"));
+                String nombre = request.getParameter("nombrep");
+                int existencia = Integer.parseInt(request.getParameter("existenciap"));
+                //sujeto de cambios
+                String nombrebusqueda = request.getParameter("nbus");
+                int existenciamenos = Integer.parseInt(request.getParameter("exmen"));
+                //no
+                ArrayList<Producto> arrayproductos = new ArrayList<Producto>();
+                Producto producto = new Producto(nombre, precio, existencia);
+                producto.registrar();
+                arrayproductos = Producto.getProductos();
+
+
+
+
+if ("comprar".equals(request.getParameter("action"))) {
+                String nombrebusqueda = request.getParameter("nombrebusqueda");
+                int existenciamenos = Integer.parseInt(request.getParameter("existenciamenos"));
+
+                
+                    if (p.getNombrep().equals(nombrebusqueda)) {
+                        p.comprar();
+                    }
+                
+            }
+     for (Producto p : arrayproductos) {
+                //Sujeto de cambios 2
+                out.println("<h2>Comprar un producto:</h2>");
+                out.println("<td><input type='text' name='nombrebusqueda'></td>");
+                out.println("<td></td>");
+                out.println("<td><input type='text' name='existenciamenos'></td>");
+                out.println("<td><button type='submit' name='action' value='comprar'>Comprar</button></td>");
+                out.println("</tr>"); 
+        }
+        

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<h1>Registrar Cliente</h1>
+    <form action="Svcli" method="post">
+        <label >Nombre: </label>
+        <input type="text" name="nombre">
+        <br>
+        <label >Telefono: </label>
+        <input type="number" name="numero">
+        <br>
+        <label >Correo: </label>
+        <input type="text" name="correo">
+        <br>
+        <input type="submit" value="Registrar cliente">
+     </form>
+    
+    <h1>Registrar producto</h1>
+    <form method="post" action="Svprod">
+        <label >Nombre del producto: </label>
+        <input type="text" name="nombrep">
+        <br>
+        <label >Precio del producto: </label>
+        <input type="text" name="preciop">
+        <br>
+        <label >Existencia del producto: </label>
+        <input type="number" name="existenciap">
+        <br>
+        <input type="submit" value="Registrar producto">
+    </form>
+    
+   
+    <h1>Comprar producto</h1>
+    <form method="post" action="Svnopudehacerloen1perdon"> 
+        <label >Nombre del producto: </label>
+        <input type="text" name="nombrebuscar">
+        <br>
+        <label > Existencias que desea comprar: </label>
+        <input type="text" name="existenciacomprar">
+        <br>
+        <input type="submit" value="comprar">
+    </form>
+
+
+  
+    
+
+</html>
